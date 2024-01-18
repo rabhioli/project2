@@ -3,6 +3,19 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Use min-height instead of height to allow content to push the height if needed */
+}
+/* Add this to your styles.css */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
 /* Set the background color of the entire app */
@@ -21,6 +34,7 @@ header {
     color: #fff; /* Change this to the desired header text color */
     padding: 10px;
     text-align: center;
+    width: 100%; /* Ensure the header takes the full width */
 }
 
 /* Style h1 elements (change color, font size, etc.) */
@@ -55,4 +69,3 @@ button:hover {
 }
 
 /* Add more custom styles for other elements as needed */
-

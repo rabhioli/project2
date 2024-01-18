@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../partials/head.ejs") %>
+<body>
+
+
+
+
+    <%- include("../partials/header.ejs") %>
+
+
+    <main>
+        <div>
+           <form action="/workouts" method="POST">
+            <fieldset>
+                <legend> Add Workout</legend>
+                <label>exercise:<input
+                        type="text"
+                        name="exercise"
+                        placeholder="name of workout"/></label>
+                <label>duration:<input
+                        type="text"
+                        name="duration"
+                        placeholder="length"/></label>
+                <label>intensity:<input
+                          type="text"
+                        name="intensity"
+                        placeholder="level"/></label>
+                        <label>completion:<input
+                            type="checkbox"
+                            name="completion" 
+                            placeholder="finished"/></label>
+                        
+            </fieldset>
+            <button>submit Workout</button>
+           </form>
+
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!-- workouts/edit.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../partials/head.ejs") %>
+<body>
+
+<%- include("../partials/header.ejs") %>
+
+<main>
+    <div>
+        <form action="/workouts/<%= workout._id %>?_method=PUT" method="POST">
+            <fieldset>
+                <legend>Edit <%= workout.exercise %></legend>
+                <!-- Input fields for editing workout details -->
+                <label for="exercise">Exercise:</label>
+                <input
+                    type="text"
+                    name="exercise"
+                    placeholder="Name of workout"
+                    value="<%= workout.exercise %>" <!-- Corrected placement -->
+                >
+
+                <label for="duration">Duration:</label>
+                <input
+                    type="text"
+                    name="duration"
+                    placeholder="Length"
+                    value="<%= workout.duration %>"
+                >
+
+                <label for="intensity">Intensity:</label>
+                <input
+                    type="text"
+                    name="intensity"
+                    placeholder="Level"
+                    value="<%= workout.intensity %>"
+                >
+
+                <label for="completion">Completion:</label>
+                <input
+                    type="checkbox"
+                    name="completion"
+                    <%= workout.completion ? "checked" : "" %>
+                >
+
+                <!-- Submit button to update workout -->
+                <button type="submit">Submit Workout</button>
+            </fieldset>
+        </form>
+
+        <a href="/workouts"><button>Back to Main Menu</button></a>
+    </div>
+</main>
+
+</body>
+</html>

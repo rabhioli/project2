@@ -89,6 +89,57 @@ app.get("/workouts", async(req, res) => {
         res.status(400).send("error, read logs for details")
     }
 });
+// New Route
+app.get("/workouts/new", (req, res) => {
+    res.render("workouts/new.ejs")
+})
+
+// create route
+app.post("/workouts", async (req, res) => {
+    try {
+        console.log(req.body); 
+        // check if completion should be true
+        req.body.completion = req.body.completion ? true : false;
+        // create the workout in the database
+        await Workout.create(req.body);
+        // redirect back to the main page
+        res.redirect("/workouts");
+    } catch (error) {
+        console.log("----", error.message, "----");
+        res.status(400).send("Error, read logs for details");
+    }
+});
+
+// edit route (get request)
+app.get("/workouts/:id/edit", async (req, res) => {
+    try{
+ // get the id from the params
+ const id = req.params.id
+ // get the fruit from the template
+ const workout = await Workout.findById(id);
+ //render the template 
+ res.render("workouts/edit.ejs", { workout });
+    }catch(error){
+        console.log("----", error.message, "----")
+        res.status(400).send("error, read logs for details")
+    }
+});
+
+//update route
+app.put("/workouts/:id", async (req, res) => {
+    try{
+        //get the id 
+        const id  = req.params.id 
+        req.body.completion = req.body.completion === "on" ? true : false
+        //update the workout
+        await Workout.findByIdAndUpdate(id, req.body)
+        res.redirect(`/workouts/${id}`)
+    }catch(error){
+        console.log("----", error.message, "----")
+        res.status(400).send("error, read logs for details")
+    }
+    
+})
 
 // the show route (get to /fruits/:id)
 app.get("/workouts/:id", async (req, res) => {
@@ -104,5 +155,4 @@ app.get("/workouts/:id", async (req, res) => {
         res.status(400).send("error, read logs for details")
     }
     
-
 })
