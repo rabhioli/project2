@@ -54,3 +54,38 @@ app.get("/", (req, res) => {
     res.send("It's Working")
 })
 
+app.get("/workouts/seed", async (req, res) => {
+ try{
+
+// array of starting workpouts
+const startWorkouts = [
+    {exercise: "Cycling", duration: "45 minutes", intensity: "Moderate", completion: true},
+    {exercise: "Pilates", duration: "40 minutes", intensity: "Low", completion: false},
+    {exercise: "Swimming", duration: "1 hour", intensity: "High", completion: true},
+    {exercise: "Strength Training", duration: "50 minutes", intensity: "Very High", completion: false},
+        ];
+// delete all workouts 
+ await Workout.deleteMany({})
+
+ // seed my starter workout
+const createdWorkouts = await Workout.create(startWorkouts)
+res.json(createdWorkouts)
+    } catch (error){
+        console.log(error.message)
+        res.send("there was an error")
+    }
+});
+
+// index route get -> /workouts
+app.get("/workouts", async(req, res) => {
+    try{
+        // get all workouts
+        const workouts = await Workout.find({})
+        // render a template
+        // workouts/index.ejs = views/workouts/index.ejs
+        res.render("workouts/index.ejs", {workouts})
+    }catch(error){
+        console.log("----", error.message, "----")
+        resizeBy.status(400).send("error, read logs for details")
+    }
+});
