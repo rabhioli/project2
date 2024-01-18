@@ -86,6 +86,23 @@ app.get("/workouts", async(req, res) => {
         res.render("workouts/index.ejs", {workouts})
     }catch(error){
         console.log("----", error.message, "----")
-        resizeBy.status(400).send("error, read logs for details")
+        res.status(400).send("error, read logs for details")
     }
 });
+
+// the show route (get to /fruits/:id)
+app.get("/workouts/:id", async (req, res) => {
+    try{
+        // get the id from params
+        const id = req.params.id
+        // find the particular workout from the database
+        const workout = await Workout.findById(id)
+        // render the template
+        res.render("workouts/show.ejs", {workout})
+    }catch(error){
+        console.log("----", error.message, "----")
+        res.status(400).send("error, read logs for details")
+    }
+    
+
+})

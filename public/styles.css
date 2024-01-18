@@ -1,0 +1,58 @@
+/* Resetting some default styles */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set the background color of the entire app */
+body {
+    background-color: #f0f0f0; /* Change this to the desired background color */
+}
+
+/* Adjust the color of the text in the app */
+body {
+    color: #333; /* Change this to the desired text color */
+}
+
+/* Style the header (change color, font size, etc.) */
+header {
+    background-color: #333; /* Change this to the desired header background color */
+    color: #fff; /* Change this to the desired header text color */
+    padding: 10px;
+    text-align: center;
+}
+
+/* Style h1 elements (change color, font size, etc.) */
+h1 {
+    color: #336699; /* Change this to the desired h1 text color */
+    font-size: 2em; /* Change this to the desired h1 font size */
+}
+
+/* Style links (change color, font size, etc.) */
+a {
+    color: #336699; /* Change this to the desired link color */
+    text-decoration: none;
+}
+
+/* Change link color on hover */
+a:hover {
+    color: #ff6600; /* Change this to the desired link color on hover */
+}
+
+/* Style buttons (change color, font size, etc.) */
+button {
+    background-color: #336699; /* Change this to the desired button background color */
+    color: #fff; /* Change this to the desired button text color */
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Change button color on hover */
+button:hover {
+    background-color: #ff6600; /* Change this to the desired button background color on hover */
+}
+
+/* Add more custom styles for other elements as needed */
+

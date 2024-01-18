@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../partials/head.ejs") %>
+<body>
+    <%- include("../partials/header.ejs") %>
+
+    <main>
+        <div>
+            <article>
+                <h2><%= workout.exercise %> - <%= workout.completion ? "finished" : "Not finished" %></h2>
+                <h3><%= workout.duration %></h3>
+                <a href="/workouts/<%= workout._id %>/edit"><button>Edit</button></a>
+                <form action="/workouts/<%= workout._id %>?_method=DELETE" method="POST">
+                    <button>Delete</button>
+                </form>
+                <a href="/workouts"><button>Back to Main Menu</button></a>
+            </article>
+        </div>
+    </main>
+</body>
+</html>
