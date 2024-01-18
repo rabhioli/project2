@@ -20,10 +20,6 @@ mongoose.connection
 const app = express()
 
 
-// routes
-app.get("/", (req, res) => {
-    res.send("It's Working")
-})
 
 // turn on the server (the listener)
 app.listen(PORT, () => {
@@ -45,5 +41,16 @@ const workoutSchema = new Schema({
 const Workout = model("Workout", workoutSchema)
 
 
+// register our middleware 
+app.use(morgan("dev")) // logger
+app.use(methodOverride("_method")) // overridse form submission
+app.use(express.urlencoded({extended: true})) //parsely
+app.use(express.static("public")) // serve files from the public folder
 
+/////////////////////////////////////////////////////
+// routes
+/////////////////////////////////////////////////////
+app.get("/", (req, res) => {
+    res.send("It's Working")
+})
 
