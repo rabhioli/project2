@@ -12,7 +12,8 @@ body {
 
 /* Set the background color of the entire app */
 body {
-    background-color: #f0f0f0;
+    background-color: #f3f2f2
+;
 }
 
 /* Adjust the color of the text in the app */
@@ -21,35 +22,41 @@ body {
 }
 
 /* Style the header */
+/* Style the header */
 header {
-    
+  
     color: #fff;
     padding: 10px;
     text-align: center;
     width: 100%;
+    position: fixed; /* Fixed position to keep it at the top */
+    top: 0; /* Position it at the top */
+    left: 0; /* Align to the left */
+    z-index: 1000; /* Set a high z-index to ensure it's above other elements */
 }
 
 /* Style h1 elements */
 h1 {
-    color: #336699;
+    color: #000000;
     font-size: 2em;
 }
 
 /* Style links */
 a {
-    color: #336699;
+    color: #050105;
     text-decoration: none;
 }
 
 /* Change link color on hover */
 a:hover {
-    color: #ff6600;
+    color: #1423f0;
 }
 
 /* Style buttons */
 button {
     background-color: #336699;
-    color: #fff;
+    color: #ffffff;
+    align-items: center;
     padding: 8px 16px;
     border: none;
     cursor: pointer;
@@ -57,7 +64,9 @@ button {
 
 /* Change button color on hover */
 button:hover {
-    background-color: #ff6600;
+    background-color:#D3D3D3
+
+    600;
 }
 
 /* Add more custom styles for other elements as needed */
@@ -94,6 +103,17 @@ button:hover {
     border-radius: 8px;
     background-color: #fff;
 }
+/* Add this to your styles.css */
+/* Style dots for each section */
+.exercise::before,
+.duration::before,
+.intensity::before,
+.completion:before {
+    content: " \2022"; /* Unicode character for a bullet point */
+    margin-left: 5px; /* Adjust the spacing as needed */
+}
+
+/* ... (your existing styles) */
 
 
 /* ... (your existing styles) */
