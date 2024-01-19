@@ -8,23 +8,26 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    /* background-image: url('https://img.freepik.com/premium-photo/watch-with-dumbbells-barbell-mat-sports-3d-rendering-illustration-retro-wave-style_499459-574.jpg');
+    background-size: cover;
+    background-position: center; */
 }
 
 /* Set the background color of the entire app */
 body {
-    background-color: #f3f2f2
+    background-color: #302f2f
 ;
 }
 
 /* Adjust the color of the text in the app */
 body {
-    color: #333;
+    color: #faf8f8;
 }
 
 /* Style the header */
 /* Style the header */
 header {
-  
+    font-weight: bold;
     color: #fff;
     padding: 10px;
     text-align: center;
@@ -34,16 +37,21 @@ header {
     left: 0; /* Align to the left */
     z-index: 1000; /* Set a high z-index to ensure it's above other elements */
 }
-
+header h1 {
+    font-weight: bold;
+    color: inherit; /* Inherit the color from the parent (header) */
+    margin: 0; /* Remove default margin */
+    font-size: 1.5em; /* Adjust font size as needed */
+}
 /* Style h1 elements */
 h1 {
-    color: #000000;
+    color: #fcfcfc;
     font-size: 2em;
 }
 
 /* Style links */
 a {
-    color: #050105;
+    color: #070707;
     text-decoration: none;
 }
 
@@ -64,7 +72,7 @@ button {
 
 /* Change button color on hover */
 button:hover {
-    background-color:#D3D3D3
+    background-color:#f7f7f7
 
     600;
 }
@@ -112,6 +120,39 @@ button:hover {
     content: " \2022"; /* Unicode character for a bullet point */
     margin-left: 5px; /* Adjust the spacing as needed */
 }
+/* Add these styles to your existing styles.css */
+
+/* .calendar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.days-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}
+
+.workout-calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+}
+
+.workout-entry {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.add-workout {
+    margin-top: 20px;
+} */
 
 /* ... (your existing styles) */
 
