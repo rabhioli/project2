@@ -141,6 +141,13 @@ app.put("/workouts/:id", async (req, res) => {
     
 })
 
+// delete route 
+app.delete("/workouts/:id", async (req, res) => {
+  const id = req.params.id
+  await Workout.findByIdAndDelete(id)
+  res.redirect("/workouts")
+})
+
 // the show route (get to /fruits/:id)
 app.get("/workouts/:id", async (req, res) => {
     try{
