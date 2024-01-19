@@ -4,7 +4,7 @@
 - **FitnessTrackerX**
 - **FitnessTrackerX is a comprehensive fitness tracking application designed to empower users on their journey to a healthier lifestyle. The purpose of the app is to provide individuals with a user-friendly platform to log and monitor their fitness activities, set and achieve personalized goals, and gain insights into their overall well-being.**
 - **Github URL:* https://github.com/rabhioli/project2*
-- Deployed Website: https://ra-seal-project2.onrender.com 
+- Deployed Website: https://ra-seal-project22.onrender.com 
 - Trello Board:https: https://trello.com/b/SZ8bNOpo/fitnesstrackerx
 
 ## List of Dependencies
